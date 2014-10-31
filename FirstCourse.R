@@ -63,3 +63,8 @@ axis(1,at=1:5,labels=10^(1:5))
 axis(2)
 box()
 mtext("Base-10 Log Scale",side=1,line=2)
+
+i.next <- function(i) {
+    (1-(1+i)^-20)/19
+}
+
