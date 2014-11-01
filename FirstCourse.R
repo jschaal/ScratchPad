@@ -68,3 +68,12 @@ i.next <- function(i) {
     (1-(1+i)^-20)/19
 }
 
+myrandom <- function(n,seed=27218,b=171,m=30269) {
+    random.number <- numeric(n) # this will store the pseudorandom output
+    random.seed <- seed
+    for (j in 1:n) {
+        random.seed <- (b ∗ random.seed) %% m
+        random.number[j] <- random.seed / m
+    }
+    return(random.number)  
+}
